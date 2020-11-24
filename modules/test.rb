@@ -11,14 +11,14 @@
 
 module Test
 
-	def set()
+	def set
 		$docmentation = true
 	    $proxy        = true
 	    $target       = "www.uol.com"
 	    $ip           = "1.1.1.1"
 	end
 
-	def debug_visual()
+	def debug_visual
 		prCyan "Visual module"
 		Visual.help()
 		Visual.banner()
@@ -28,12 +28,12 @@ module Test
 		Visual.linux_util()	
 	end
 
-	def debug_automap()
+	def debug_automap
 		prCyan "Automap"
 		Automap.less_boring()
 	end
 
-	def debug_engine()
+	def debug_engine
 		prCyan "Engine module"
 		prCyan "init"
 		Engine.INIT()
@@ -49,7 +49,7 @@ module Test
 		Engine.dns_scanner()
 	end
 
-	def debug_all()
+	def debug_all
 		prCyan "[CHEAP DEBUG]"
 		Test.set()
 		Test.debug_visual()

@@ -14,7 +14,7 @@ module Engine
     $pline ="\n ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 
     # INIT options and set target
-    def INIT()
+    def INIT
         while $target == false || $ip == false
             if $documentation == false
                 print "Enable documentation? [yes|no]: "
@@ -48,7 +48,7 @@ module Engine
     end
 
     # Reset to default values
-    def R()
+    def R
         system("clear && reset")
         $documentation = false
         $proxy         = false
@@ -83,7 +83,7 @@ module Engine
     end
 
     # Extract files
-    def extract()
+    def extract
         prRed($line)
         print "Set file name: "; file_name = gets.chomp.to_s
         msg = "[ERROR]: File extension fail"
@@ -94,7 +94,7 @@ module Engine
     end
     
     # Compress files
-    def compress()
+    def compress
         print "Set file name: "; file_name = gets.chomp.to_s
         print "Set output file name: "; files = gets.chomp.to_s
         print "Set format [tar/gz/bz2/zip]: "; ext = gets.chomp.to_s
@@ -107,7 +107,7 @@ module Engine
     end
 
     # Set cover your tracks (or yes)
-    def cover()
+    def cover
         prRed($line)
         # Clear
         prCyan "[+] Clear auth log"
@@ -131,7 +131,7 @@ module Engine
     end
 
     # Machine status
-    def status()
+    def status
        prRed $pline
        prRed "\n[+] #{$time} [+]"
        prGreen "\n[+] Memory:\n"
@@ -144,7 +144,7 @@ module Engine
     end
 
     # Web vul scanner
-    def search()
+    def search
         prRed($line)
         prYellow "#{$line}[+] WHOIS"; sys("whois -a #{$target}")
         prYellow "#{$line}[+] Test connection"; sys("ping -c4 #{$ip}")
@@ -155,7 +155,7 @@ module Engine
     end
 
     # Web dns scanner
-    def dns_scanner()
+    def dns_scanner
         prYellow "#{$line}DNS Enumeration"
         sys("dnsenum --enum #{$target} ./wordlist/dns2.txt") 
         reg_dns = ['A', 'AAAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA']
@@ -166,7 +166,7 @@ module Engine
     end
 
     # Web directory scanner
-    def dir_scanner()
+    def dir_scanner
         prCyan $line
         prCyan "======================== HOTKEYS ========================"
         prCyan " 'n' -> Go to next directory."
@@ -209,7 +209,7 @@ module Engine
         end
     end
   
-    def simple_map()
+    def simple_map
 
         alone = [
             ["-sL", "List Scan - simply list targets to scan"],

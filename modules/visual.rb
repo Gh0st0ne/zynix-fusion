@@ -9,7 +9,7 @@
 
 module Visual
      
-    def banner()
+    def banner
         puts "\n"
         prRed(' _      _                    ______     _ _   _______          _ _    _ _   ')
         prRed('| |    (_)                  |  ____|   (_) | |__   __|        | | |  (_) |  ')
@@ -22,7 +22,7 @@ module Visual
   
     end 
 
-    def web_dns()
+    def web_dns
   
         prRed("Netcraft      – endereços fora do Brasil      http://news.netcraft.com/")
         prRed("Domaintools   - whois, lookup, IP, etc.       http://www.domaintools.com/")
@@ -35,7 +35,7 @@ module Visual
       
     end
 
-    def linux_files()
+    def linux_files
 
         prRed($line)
         prCyan("Local users' hashes              /etc/shadow")
@@ -61,7 +61,7 @@ module Visual
 
     end
 
-    def linux_folders()
+    def linux_folders
 
         prRed($line)
         prGreen("User binaries                      /bin")
@@ -81,7 +81,7 @@ module Visual
 
     end
  
-    def windows_files()
+    def windows_files
 
         prRed($line)
         prPurple 'WINDOWS FILES'
@@ -100,7 +100,7 @@ module Visual
 
     end
 
-    def linux_util()
+    def linux_util
 
         prRed($line)
         prYellow("Grab url                      wget http:// url -0 url.txt -o /dev/null")
@@ -118,7 +118,7 @@ module Visual
 
     end
 
-    def help()
+    def help
 
         puts $line
         prRed('|exit           |   Close this script                                           ')
