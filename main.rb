@@ -21,9 +21,9 @@ require_relative "./modules/fakedump.rb"
 require_relative "./modules/install.rb"
 require_relative "./database/names.rb"
 
-
 require 'openssl'
 require 'builder'
+require 'faraday'
 
 include Interpreter
 include Engine
